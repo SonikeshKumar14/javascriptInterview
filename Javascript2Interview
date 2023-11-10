@@ -1,0 +1,17 @@
+// Array Destructuring and swap question.
+
+const arr = [1, 2, 3, 4, 5];
+
+// let [arr1, arr2, arr3, arr4, arr5] = arr;
+// console.log(arr1, arr2, arr3, arr4, arr5);
+
+let [arr1, arr2, ...arr3] = arr;
+console.log(arr1, arr2);
+console.log(arr3);
+
+let num1 = 60;
+let num2 = 50;// yaha par (;) lag bohot jaruri kyuki javascript kabhi kabhi unsual behave karta hai
+// swap these 
+
+[num1, num2] = [num2, num1];
+console.log(num1, num2);
