@@ -28,19 +28,22 @@ console.log(ArrData([
   <section>
     <p class="n_count">Normal Count</p>
     <p class="t_count">Throttle Count</p>
+    <p class="d_count">Debounce Count</p>
   </section>
 
   <script>
      const normal_div = document.querySelector('.n_count');
      const throttle_div = document.querySelector('.t_count');
+     const debounce_div = document.querySelector('.d_count');
      let n_count = 0;
      let t_count = 0;
      isScrolling = true;
+     let interval;
      const normalCount = () => {
         n_count++;
         normal_div.innerHTML = `Normal Count: ${n_count}`;
      }
-     count throttleCount = () => {
+     const throttleCount = () => {
         if(isScrolling == true){
             t_count++;
             isScrolling = false;
@@ -49,8 +52,19 @@ console.log(ArrData([
                isScrolling = true;
             }, 1000);
      }
-    
+    // Throttle after some time ke bad fire karta hai function ko scrolling ya searching mai
+    // debounce jab fire karta hai function jab ham scrolling rok dete hai ya searching mai likha band kar dete hai
+     const debounceCount = () => {
+       clearTimout(interval);
+       interval = setTimeout(() =>{
+        d_count++;
+        debounce_div.innerHTML = `Debounce Count: ${d_count}`;
+       },1000)
+     }
      const showCount = () =>{
         normalCount();
         throttleCount();
+        debounceCount();
      }
+</script>
+</body>
