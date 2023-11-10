@@ -1,0 +1,11 @@
+// Q1. Remove null and undefined from object.
+const obj = {
+   a: 1,
+   b: null,
+   c: undefined,
+   d: 'hello'
+};
+// to change from object to array Object.entries(obj) method.
+// to change from array to object Object.fromEntries
+const newOjbect = Object.fromEntries(Object.entries(obj).filter(([_, val])=> val!= null));
+console.log(newOjbect)
