@@ -77,3 +77,15 @@ const getMaximumNo = (arr) => arr.reduce((smallNum, num) => Math.max(smallNum, n
 const arr = [12, 3, 5, 89, 1];
 console.log(getMinimumNo(arr), getMaximumNo(arr))
 
+// Q6. Merge two sorted array and in ascending and descending order.
+
+let arr1 = [1, 3, 4, 5, 5], arr2 = [2, 4, 6, 6, 8];
+
+let arr3 = [...arr1, ...arr2];
+
+// arr.sort() is trah number sort nhi hote kyuki javascript mai sort string ke liye hota hai or vo number ko bhi string samajta hai
+arr3.sort((a,b)=> a-b); // for ascending order
+
+// console.log(arr3.sort((a,b)=> b-a)); // for descending order
+arr3 = [...new Set(arr3)];
+console.log(arr3);
