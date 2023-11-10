@@ -22,3 +22,35 @@ console.log(ArrData([
   ['c', 3],
   ['d', 4],
 ]))
+
+//Q3 Throttling
+<body onscroll="showCount()">
+  <section>
+    <p class="n_count">Normal Count</p>
+    <p class="t_count">Throttle Count</p>
+  </section>
+
+  <script>
+     const normal_div = document.querySelector('.n_count');
+     const throttle_div = document.querySelector('.t_count');
+     let n_count = 0;
+     let t_count = 0;
+     isScrolling = true;
+     const normalCount = () => {
+        n_count++;
+        normal_div.innerHTML = `Normal Count: ${n_count}`;
+     }
+     count throttleCount = () => {
+        if(isScrolling == true){
+            t_count++;
+            isScrolling = false;
+            throttle_div.innerHTML = `Throttle Count: ${t_count}`;
+            setTimeout(() => {
+               isScrolling = true;
+            }, 1000);
+     }
+    
+     const showCount = () =>{
+        normalCount();
+        throttleCount();
+     }
