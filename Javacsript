@@ -68,3 +68,12 @@ console.log(ArrData([
      }
 </script>
 </body>
+
+// Q5. Find smallest and largest Number.
+
+const getMinimumNo = (arr) => arr.reduce((smallNum, num) => Math.min(smallNum, num))
+const getMaximumNo = (arr) => arr.reduce((smallNum, num) => Math.max(smallNum, num))
+
+const arr = [12, 3, 5, 89, 1];
+console.log(getMinimumNo(arr), getMaximumNo(arr))
+
