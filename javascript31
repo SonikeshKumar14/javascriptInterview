@@ -97,3 +97,14 @@ console.log(arr1);// o/p -> [1,2,3,4,5]
 console.log(arr2)// o/p -> [1,2,3,4,5]
 
 // dono array or object mai content const ke baad bhi modify hote hai.
+
+// Q11 Hoisting concept
+var myName = "vinod";
+
+const guessName = () => {
+  console.log(myName); // output undefined ayega hoisting ki vajeh se
+  var myName = "sonu";// var myName; upar ayega or yaha assign nhi hui hogi islye undefind o/p ayega
+  console.log(myName) // yaha assign ho chuka hoga myName
+}
+guessName();
+console.log(myName)
