@@ -35,3 +35,20 @@ console.log(typeof []);
 // method 1
 console.log(Array.isArray([]));
 console.log([] instanceof Array);
+
+
+//Q9 String vs object o/p different ka concept
+let myName = "Vinod Thapa";
+let channelName = myName;
+myName = "Thapa";
+console.log(channelName);// o/p --> "vinod Thapa"
+
+const obj1 = {
+  id: 1,
+  name: "thapa"
+} 
+
+const obj2 = obj1 // ye obj1 reference de rha hai object ka obj2 ko
+obj2.name = "vinod";// obj1 aur obj name hai object ke samjhliyo bhai tu
+console.log(obj1.name); // ye o/p "vinod" dega kyuki
+// obj1 aur obj2 same object ko link hai
