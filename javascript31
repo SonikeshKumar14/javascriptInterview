@@ -78,3 +78,22 @@ console.log(a === b)
 
 let c = {}
 console.log(b === c)
+
+// object and array both are work on pass by reference
+const obj1 = {
+  name: "sonu",
+  pass: "in"
+}
+
+const obj2 = obj1;
+obj2.name = "sahil";
+console.log(obj1);// o/p -> {name: "sahil", pass: "in"}
+console.log(obj2);// o/p -> {name: "sahil", pass: "in"}
+
+const arr1 = [1, 2, 3, 4];
+const arr2 = arr1;
+arr2.push(5);
+console.log(arr1);// o/p -> [1,2,3,4,5]
+console.log(arr2)// o/p -> [1,2,3,4,5]
+
+// dono array or object mai content const ke baad bhi modify hote hai.
