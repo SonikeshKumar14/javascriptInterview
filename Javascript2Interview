@@ -84,6 +84,17 @@ const user = [
 
 console.log(user[2]?.name)
 
+//Q7 nullish coalescing operator (??) is 
+
+
+let myVal = 0;
+const myNumber = myVal || 10;
+const myNumber1 = myVal ?? 10;
+
+console.log(myNumber);
+console.log(myNumber1);
+
+
 
 
 
