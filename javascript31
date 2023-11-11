@@ -19,3 +19,11 @@ setTimeout(function(){
 }
 
 logNumbers();
+
+// Javascript decimal no. treated as floating no.s
+
+console.log(400.4 === 200.2 * 2);
+console.log(900.9  === (300.3 * 3 * 10)/10);// we can handle floating point no.s like this during addition and multiplication
+console.log(2.02 + 4.01) // it give o/p ->> 6.029999999999999
+// and we want this 2.02 + 4.01 = 6.03;
+console.log((2.02 * 100 + 4.01 * 100)/100);
