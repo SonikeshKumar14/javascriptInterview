@@ -94,6 +94,18 @@ const myNumber1 = myVal ?? 10;
 console.log(myNumber);
 console.log(myNumber1);
 
+// Q8 Intersection and union
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [3, 4, 5, 6, 7];
+
+
+const interArr = arr1.filter((currEle) => arr2.includes(currEle))
+console.log(interArr);
+
+const unionArr = [...new Set([...arr1, ...arr2])];
+console.log(unionArr);
+
+
 
 
 
