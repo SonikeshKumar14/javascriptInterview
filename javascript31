@@ -27,3 +27,11 @@ console.log(900.9  === (300.3 * 3 * 10)/10);// we can handle floating point no.s
 console.log(2.02 + 4.01) // it give o/p ->> 6.029999999999999
 // and we want this 2.02 + 4.01 = 6.03;
 console.log((2.02 * 100 + 4.01 * 100)/100);
+
+// How to detect an Array in Javascript ?
+console.log(typeof {});
+console.log(typeof []);
+
+// method 1
+console.log(Array.isArray([]));
+console.log([] instanceof Array);
