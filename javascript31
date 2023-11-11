@@ -52,3 +52,29 @@ const obj2 = obj1 // ye obj1 reference de rha hai object ka obj2 ko
 obj2.name = "vinod";// obj1 aur obj name hai object ke samjhliyo bhai tu
 console.log(obj1.name); // ye o/p "vinod" dega kyuki
 // obj1 aur obj2 same object ko link hai
+
+//Q10 // predict the output
+let arrName = [
+  {
+    name: 'vinod',
+    pass: 'thapa'
+  },
+  {
+    name: "thapa",
+    pass: "technical"
+  }
+]
+
+console.log(
+  arrName.indexOf({
+    name: "thapa",
+    pass: "technical"
+})) // output:- -> -1 kyuki object pass by refence hota hai
+// 2 object kabhi bhi same nhi hota bhale hi unka cotent same kyu na ho
+
+let a = {}
+let b = a
+console.log(a === b)
+
+let c = {}
+console.log(b === c)
