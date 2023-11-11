@@ -55,6 +55,35 @@ const arr = ["vinod", 1, 3, 4, 5];
 for(let key in arr){
   console.log(`the keys are ${key}`);
 }
+// find key use of for-of
+const object = {a : 1, b : 2, c : 3};
+for(let key of Object.keys(object)){
+   console.log(`the keys are ${key}`);
+}
+
+//Q7 Optional Chaining with object and array
+
+const user1 = {
+  name: "Thapa",
+  age: 28,
+  address: {
+    street: "Main St",
+    city: "New Road",
+    state: "PK",
+    zip: "10101",
+  }
+}
+console.log(user1?.address.city)
+console.log(user1?.address?.Roadmap)
+//user.address?.Roadmap mai pehle vo check karega kya address object mai hai agar hai toh vo Roadmap par jayega 
+const user = [
+  {name: "Jhon", age: 30},
+  {name: "Jane", age: 25},
+  {name: "Bob", age: 35}
+]
+
+console.log(user[2]?.name)
+
 
 
 
