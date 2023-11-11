@@ -1,0 +1,6 @@
+
+// string replace and replaceAll
+let str = "thapa thapa ram ";
+console.log(str.replaceAll("thapa", "ram"));
+// /thapa/g  --> yaha par g matlab global hai jo var ye first thapa ko hi bahadur banyega
+console.log(str.replace(/thapa/g, "bahadur"));// agar replaceAll work na kare or error de tab use ye
