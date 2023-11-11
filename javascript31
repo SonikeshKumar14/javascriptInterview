@@ -4,3 +4,18 @@ let str = "thapa thapa ram ";
 console.log(str.replaceAll("thapa", "ram"));
 // /thapa/g  --> yaha par g matlab global hai jo var ye first thapa ko hi bahadur banyega
 console.log(str.replace(/thapa/g, "bahadur"));// agar replaceAll work na kare or error de tab use ye
+
+
+const logNumbers = () => {
+  console.log(1);
+setTimeout(function(){
+  console.log(2);
+}, 1000); //setTimout webApi stack mai chala jata hai 
+//Event loop vali video dekh
+setTimeout(function(){
+  console.log(3);
+},0)
+  console.log(4);
+}
+
+logNumbers();
