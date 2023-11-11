@@ -37,6 +37,29 @@ const mySetArr = [...new Set(arr)];
 console.log(mySetArr)
 
 
+// for-of for [arr, map, set, string] to iterate over values
+// for-in for an array to iterate over a key
+// for-in for objects to enumerate its (object's) properties.
+
+const myLuckyNumbers = [1, 2, 3, 4, 5, 6, 6, 7];
+for(let num of myLuckyNumbers){
+   console.log("myLuckyNumbers " + num)
+}
+
+const object = {a : 1, b : 2, c : 3};
+for(let key in object){
+  console.log(`the keys are ${key}`);
+}
+
+const arr = ["vinod", 1, 3, 4, 5];
+for(let key in arr){
+  console.log(`the keys are ${key}`);
+}
+
+
+
+
+
 
 
 
